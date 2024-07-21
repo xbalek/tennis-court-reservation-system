@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/home/balek/skola/staze/inQool/tennis-court-reservation-system/src/main</OriginalElement>
+  <nodes>
+    <node x="296.5" y="1326.0">com.xbalek.tennis_court_reservation_system.init.DataInitializer</node>
+    <node x="113.0" y="466.0">com.xbalek.tennis_court_reservation_system.controller.CustomerController</node>
+    <node x="209.5" y="786.0">com.xbalek.tennis_court_reservation_system.service.interfaces.CustomerServiceInterface</node>
+    <node x="153.5" y="1506.0">com.xbalek.tennis_court_reservation_system.service.TennisCourtService</node>
+    <node x="99.5" y="726.0">com.xbalek.tennis_court_reservation_system.model.SurfaceTypeEnum</node>
+    <node x="122.5" y="906.0">com.xbalek.tennis_court_reservation_system.mappers.CustomerMapper</node>
+    <node x="-58.0" y="1326.0">com.xbalek.tennis_court_reservation_system.repository.ReservationRepository</node>
+    <node x="243.5" y="966.0">com.xbalek.tennis_court_reservation_system.service.CustomerService</node>
+    <node x="145.5" y="1866.0">com.xbalek.tennis_court_reservation_system.repository.interfaces.SurfaceTypeRepositoryInterface</node>
+    <node x="6.0" y="1986.0">com.xbalek.tennis_court_reservation_system.exceptions.AlreadyReservedException</node>
+    <node x="101.5" y="606.0">com.xbalek.tennis_court_reservation_system.service.interfaces.ReservationServiceInterface</node>
+    <node x="-35.0" y="406.0">com.xbalek.tennis_court_reservation_system.controller.ReservationController</node>
+    <node x="13.0" y="1806.0">com.xbalek.tennis_court_reservation_system.service.SurfaceTypeService</node>
+    <node x="250.0" y="2186.0">com.xbalek.tennis_court_reservation_system.security.JWTHeaderValidator</node>
+    <node x="166.0" y="2126.0">com.xbalek.tennis_court_reservation_system.configuration.WebConfig</node>
+    <node x="207.5" y="126.0">com.xbalek.tennis_court_reservation_system.configuration.AppConfig</node>
+    <node x="220.0" y="46.0">com.xbalek.tennis_court_reservation_system.security.JWTProvider</node>
+    <node x="-177.0" y="466.0">com.xbalek.tennis_court_reservation_system.controller.TennisCourtController</node>
+    <node x="64.0" y="186.0">com.xbalek.tennis_court_reservation_system.dto.SurfaceTypeDTO</node>
+    <node x="-74.0" y="1446.0">com.xbalek.tennis_court_reservation_system.repository.interfaces.TennisCourtRepositoryInterface</node>
+    <node x="59.0" y="1686.0">com.xbalek.tennis_court_reservation_system.service.interfaces.SurfaceTypeServiceInterface</node>
+    <node x="52.5" y="326.0">com.xbalek.tennis_court_reservation_system.mappers.TennisCourtMapper</node>
+    <node x="131.5" y="-14.0">com.xbalek.tennis_court_reservation_system.model.Customer</node>
+    <node x="23.5" y="46.0">com.xbalek.tennis_court_reservation_system.model.Reservation</node>
+    <node x="-80.0" y="1626.0">com.xbalek.tennis_court_reservation_system.repository.TennisCourtRepository</node>
+    <node x="68.0" y="1146.0">com.xbalek.tennis_court_reservation_system.repository.interfaces.ReservationRepositoryInterface</node>
+    <node x="-68.0" y="266.0">com.xbalek.tennis_court_reservation_system.mappers.SurfaceTypeMapper</node>
+    <node x="-13.5" y="546.0">com.xbalek.tennis_court_reservation_system.dto.ReservationDTO</node>
+    <node x="-108.0" y="2046.0">com.xbalek.tennis_court_reservation_system.configuration.SecurityConfig</node>
+    <node x="-79.0" y="-14.0">com.xbalek.tennis_court_reservation_system.model.SurfaceType</node>
+    <node x="-87.5" y="1866.0">com.xbalek.tennis_court_reservation_system.controller.AuthController</node>
+    <node x="79.5" y="1266.0">com.xbalek.tennis_court_reservation_system.service.interfaces.TennisCourtServiceInterface</node>
+    <node x="-177.5" y="606.0">com.xbalek.tennis_court_reservation_system.controller.SurfaceTypeController</node>
+    <node x="-43.5" y="1086.0">com.xbalek.tennis_court_reservation_system.dto.LoginRequest</node>
+    <node x="-190.0" y="1146.0">com.xbalek.tennis_court_reservation_system.repository.CustomerRepository</node>
+    <node x="-65.5" y="126.0">com.xbalek.tennis_court_reservation_system.mappers.ReservationMapper</node>
+    <node x="-24.5" y="786.0">com.xbalek.tennis_court_reservation_system.service.ReservationService</node>
+    <node x="179.5" y="2046.0">com.xbalek.tennis_court_reservation_system.repository.SurfaceTypeRepository</node>
+    <node x="-176.0" y="2186.0">com.xbalek.tennis_court_reservation_system.TennisCourtReservationSystemApplication</node>
+    <node x="-184.0" y="966.0">com.xbalek.tennis_court_reservation_system.repository.interfaces.CustomerRepositoryInterface</node>
+    <node x="-188.0" y="326.0">com.xbalek.tennis_court_reservation_system.exceptions.NotFoundException</node>
+    <node x="-185.0" y="1506.0">com.xbalek.tennis_court_reservation_system.model.CustomerRole</node>
+    <node x="-178.5" y="46.0">com.xbalek.tennis_court_reservation_system.model.TennisCourt</node>
+    <node x="-175.5" y="186.0">com.xbalek.tennis_court_reservation_system.dto.TennisCourtDTO</node>
+    <node x="-185.5" y="1686.0">com.xbalek.tennis_court_reservation_system.dto.CustomerDTO</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.xbalek.tennis_court_reservation_system.repository.TennisCourtRepository" target="com.xbalek.tennis_court_reservation_system.repository.interfaces.TennisCourtRepositoryInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="34.0" y="1600.0" />
+      <point x="74.0" y="1600.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.xbalek.tennis_court_reservation_system.repository.CustomerRepository" target="com.xbalek.tennis_court_reservation_system.repository.interfaces.CustomerRepositoryInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="-86.0" y="1060.0" />
+      <point x="-46.0" y="1060.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.xbalek.tennis_court_reservation_system.repository.ReservationRepository" target="com.xbalek.tennis_court_reservation_system.repository.interfaces.ReservationRepositoryInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="54.0" y="1240.0" />
+      <point x="214.0" y="1240.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.xbalek.tennis_court_reservation_system.service.SurfaceTypeService" target="com.xbalek.tennis_court_reservation_system.service.interfaces.SurfaceTypeServiceInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="114.0" y="1780.0" />
+      <point x="194.0" y="1780.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.xbalek.tennis_court_reservation_system.service.CustomerService" target="com.xbalek.tennis_court_reservation_system.service.interfaces.CustomerServiceInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.xbalek.tennis_court_reservation_system.service.ReservationService" target="com.xbalek.tennis_court_reservation_system.service.interfaces.ReservationServiceInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="74.0" y="700.0" />
+      <point x="234.0" y="700.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.xbalek.tennis_court_reservation_system.service.TennisCourtService" target="com.xbalek.tennis_court_reservation_system.service.interfaces.TennisCourtServiceInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="254.0" y="1420.0" />
+      <point x="214.0" y="1420.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.xbalek.tennis_court_reservation_system.repository.SurfaceTypeRepository" target="com.xbalek.tennis_court_reservation_system.repository.interfaces.SurfaceTypeRepositoryInterface" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.34830960854092524" showDependencies="false" x="144.49999999999955" y="1109.9999999999998" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
