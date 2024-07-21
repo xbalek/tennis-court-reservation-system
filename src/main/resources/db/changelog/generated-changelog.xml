@@ -1,0 +1,74 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="balek (generated)" id="1720967486362-1">
+        <createTable tableName="CUSTOMER">
+            <column name="IS_DELETED" type="BOOLEAN"/>
+            <column name="ROLE" type="TINYINT"/>
+            <column name="CREATED_AT" type="TIMESTAMP"/>
+            <column name="DELETED_AT" type="TIMESTAMP"/>
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_52"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-2">
+        <createTable tableName="RESERVATION">
+            <column name="IS_DELETED" type="BOOLEAN"/>
+            <column name="IS_DOUBLES" type="BOOLEAN"/>
+            <column name="COURT_ID" type="BIGINT"/>
+            <column name="CREATED_AT" type="TIMESTAMP"/>
+            <column name="CUSTOMER_ID" type="BIGINT"/>
+            <column name="END_TIME" type="TIMESTAMP"/>
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_2"/>
+            </column>
+            <column name="START_TIME" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-3">
+        <createTable tableName="SURFACE_TYPE">
+            <column name="IS_DELETED" type="BOOLEAN"/>
+            <column name="PRICE_PER_MINUTE" type="numeric(38, 2)"/>
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_6"/>
+            </column>
+            <column name="NAME" type="ENUM('CLAY', 'GRASS', 'HARD')"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-4">
+        <createTable tableName="TENNIS_COURT">
+            <column name="IS_DELETED" type="BOOLEAN"/>
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_A"/>
+            </column>
+            <column name="SURFACE_TYPE_ID" type="BIGINT"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-5">
+        <createIndex associatedWith="" indexName="FK41V6UEO0HIRAN65W8Y1CTA2C2_INDEX_2" tableName="RESERVATION">
+            <column name="CUSTOMER_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-6">
+        <createIndex associatedWith="" indexName="FKKAVWSIXKLS3LMVVA1ELJYG6AR_INDEX_A" tableName="TENNIS_COURT">
+            <column name="SURFACE_TYPE_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-7">
+        <createIndex associatedWith="" indexName="FKLPF3JUSMUFCQ09QQH3A5TSYWS_INDEX_2" tableName="RESERVATION">
+            <column name="COURT_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-8">
+        <addForeignKeyConstraint baseColumnNames="CUSTOMER_ID" baseTableName="RESERVATION" constraintName="FK41V6UEO0HIRAN65W8Y1CTA2C2" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ID" referencedTableName="CUSTOMER" validate="true"/>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-9">
+        <addForeignKeyConstraint baseColumnNames="SURFACE_TYPE_ID" baseTableName="TENNIS_COURT" constraintName="FKKAVWSIXKLS3LMVVA1ELJYG6AR" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ID" referencedTableName="SURFACE_TYPE" validate="true"/>
+    </changeSet>
+    <changeSet author="balek (generated)" id="1720967486362-10">
+        <addForeignKeyConstraint baseColumnNames="COURT_ID" baseTableName="RESERVATION" constraintName="FKLPF3JUSMUFCQ09QQH3A5TSYWS" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ID" referencedTableName="TENNIS_COURT" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
